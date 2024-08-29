@@ -14,12 +14,10 @@ from sklearn.metrics import f1_score, accuracy_score, recall_score, precision_sc
 from argparse import ArgumentParser, Namespace
 import argparse
 
-openai.api_key = ""  # get one from https://openai.com , first few requests are free!
-serpapi_key = ""  # get one from https://serpapi.com , first few requests are free!
+openai.api_key = OPENAI_API_KEY
+serpapi_key = SERPAPI_KEY
 
-error_log_file = 'log/mylog_20240814_3DFC.log'
-
-
+error_log_file = 'log/mylog.txt'
 def my_log(txt):
     with open(error_log_file, 'a') as f:
         f.write(txt + '\n')
